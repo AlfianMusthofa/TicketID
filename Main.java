@@ -236,14 +236,15 @@ public class Main {
                                                         System.out.print("Masukkan nominal bayar Rp.");
                                                         int nominalBayar = input.nextInt();
 
-                                                        if (nominalBayar >= hargaTiket) {
+                                                        if (nominalBayar < hargaTiket) {
+                                                            System.out.println("E-Ticket tidak cukup!");
+                                                        }
+                                                        else {
+                                                            
                                                             wallet.bayarTiket(hargaTiket);
                                                             for (User user : users){
                                                                 user.displayInfo();
                                                             }
-                                                        }
-                                                        else {
-                                                            System.out.println("E-Ticket tidak cukup!");
                                                         }
 
                                                         break;
