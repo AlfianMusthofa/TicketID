@@ -41,6 +41,7 @@ public class Main {
                     case 1: // Registrasi
                         try (Connection connection = koneksiDB.getConnection()) {
 
+                            ClearScreen.clearScreen();
                             System.out.println("-----------------------------");
                             System.out.println("|         Registrasi        |");
                             System.out.println("-----------------------------");
@@ -78,6 +79,7 @@ public class Main {
 
                         try (Connection connection = koneksiDB.getConnection()) {
 
+                            ClearScreen.clearScreen();
                             System.out.println("-----------------------------");
                             System.out.println("|           Login           |");
                             System.out.println("-----------------------------");
@@ -277,6 +279,7 @@ public class Main {
 
                     case 3:
 
+                        ClearScreen.clearScreen();
                         System.out.print("Masukkan nominal Rp.");
                         int nominalBeli = input.nextInt();
 
@@ -286,6 +289,7 @@ public class Main {
 
                     default:
 
+                        ClearScreen.clearScreen();
                         wallet.cekSaldo();
 
                         break;
